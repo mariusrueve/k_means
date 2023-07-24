@@ -99,10 +99,19 @@ class KMeans:
 def main():
     """Main function."""
     k = 3
-    iterations = 20
+    iterations = 4
     points = []
-    for _ in range(300):
+    for _ in range(500):
         points.append(Point(random.random(), random.random()))
+
+    # data points from exercise in csb at UHH
+    points = [
+        Point(0.1, 0.2),
+        Point(0.5, 0.8),
+        Point(0.7, 0.3),
+        Point(0.6, 0.4),
+        Point(0.4, 0.7),
+    ]
 
     k_means = KMeans(points, k)
     k_means.run(iterations)
